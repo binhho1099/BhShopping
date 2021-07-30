@@ -1,0 +1,105 @@
+.packages{
+    margin-bottom: 75px;
+    &-item{
+        border: 1px solid $border-color;
+        box-shadow: 0 0 5px 2px $shadow-color;
+    }
+    &-tittle{
+        margin: 65px 0 50px;
+    }
+
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 3rem;
+    }
+    &-img >img{
+        width: 100%;
+    }
+    &-img{
+        position: relative;
+    }
+    &-img__desc{
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        transform: translateY(-50%);
+        background: #ffa400;
+        border-radius: 50%;
+        display: flex;
+    }
+    &-img__desc>img{
+        width: 75%;
+        margin: auto;
+    }
+
+
+    // info
+    &-info{
+        padding: 30px;
+
+        &__heading{
+            font-size: 2rem;
+            color: $heading-color;
+            font-weight: 700;
+        }
+
+        &__location{
+            font-size: 1.6rem;
+            color: $text-color;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 15px 0 20px;
+        }
+
+        &__div{
+            height: 1px;
+            width: 100%;
+            background-color: $border-color;
+        }
+
+        &__price{
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        &__desc{
+            font-size: 1.4rem;
+            color: $heading-color;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        &__desc span{
+            display: inline-block;
+            padding: 1px 10px;
+            background: #ffca66;
+            line-height: 1;
+            border-radius: 10px;
+        }
+
+        &__money{
+            font-size: 3rem;
+            color: $heading-color;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        &__dip{
+            margin: 25px 0;
+            line-height: 1.4;
+            color:$text-color;
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+        &__btn{
+            // font-size: rem;
+            color: $white-color;
+            background-color: #ffca66;
+        }
+    }
+}

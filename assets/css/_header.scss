@@ -1,0 +1,217 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header.jpg) center no-repeat;
+    // filter: brightness(80%);
+
+    &__content{
+        text-align: center;
+        margin-top: 17rem;
+    }
+    &__heading{
+        color: $white-color;
+        font-size: 5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    &__sub-heading{
+        color: $white-color;
+        font-size: 2rem;
+        letter-spacing: 5px;
+        margin: 3.5rem 0 6.5rem;
+    }
+    &__input{
+        width: 30%;
+        padding: 15px 30px;
+        border-radius: 25px;
+        background-color: $white-color;
+        font-size: 1.4rem;
+        outline: none;
+        border: none;
+    }
+    &__option{
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+}
+
+.option-box{
+    padding: 25px 35px;
+    background-color: $shadow-color;
+    margin: 0 15px;
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $white-color;
+    }
+    &__link>i{
+        font-size: 3rem;
+        margin-bottom: 18px;
+    }
+    &__link>span{
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 3px;
+    }
+}
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    padding: 30px 65px;
+
+    &__logo-image{
+        font-size: 3rem;
+        color: $white-color;
+    }
+
+    &__list{
+        font-size: 1.8rem;
+        margin-left: 4.5rem;
+        position: relative;
+    }
+    &__link{
+        color: $white-color;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    &__icon{
+        margin-left: auto;
+        font-size: 3rem;
+        color: $white-color;
+        cursor: pointer;
+    }
+    &__sub-list{
+        position: absolute;
+        width: 190px;
+        top: 200%;
+        left: -2rem;
+        background-color: $white-color;
+        visibility: hidden;
+        font-size: 1.4rem;
+        color: $text-color;
+        box-shadow: 0 0 10px $shadow-color;
+    }
+    &__sub-list::after{
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 15px;
+    }
+    &__sub-items{
+        padding: 20px 25px;
+        cursor: pointer;
+    }
+    &__sub-items:hover{
+        background-color: rgba($color: #000000, $alpha: 0.05);
+    }
+    &__sub-items:not(:last-child){
+        border-bottom: 1px solid $border-color;
+    }
+    &__list:hover .nav__sub-list{
+        visibility: visible;
+    }
+
+    &__btn{
+        background-color: $primary-color;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+}
+
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: -320px;
+    height: 100vh;
+    background-color: $white-color;
+    padding: 3rem;
+    width: 320px;
+    overflow-y: scroll;
+    transition: all 0.2s linear;
+    &__close{
+        position:absolute;
+        top: 10px;
+        right: 10px;
+        border: 1px solid $text-color;
+        padding: 5px;
+        border-radius: 50%;
+        line-height: 1;
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+    &__title{
+        text-align: center;
+    }
+    &__title > span{
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $text-color;
+    }
+    &__title > h2{
+        display: inline;
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 10px 0;
+        opacity: 0.8;
+    }
+    &__title > h2::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 20%;
+        background-color: #ffa600d8;
+        left: 0;
+        bottom: 20%;
+        z-index: -1;
+    }
+    &__link{
+        display: flex;
+        // justify-content: space-between;
+        align-items: center ;
+    }
+    &__items{
+        margin: 10px 0;
+    }
+    &__content{
+        margin: 30px 0;
+    }
+}
+
+.items-info{
+    margin-left: 20px;
+    &__heading{
+        font-size: 2rem;
+        color: $heading-color;
+        padding: 10px 0;
+    }
+    & > span{
+        color: $text-color;
+        font-size: 1.4rem;
+    }
+    &__btn{
+        background-image: linear-gradient(to right,#FDC830,#F37335);
+        padding: 10px 20px;
+        color: $white-color;
+        margin: 10px 0;
+    }
+}
+.items-img{
+    width: 100px;
+
+}
+
+.show-side-bar{
+    right: 0;
+}
